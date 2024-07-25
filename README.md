@@ -43,7 +43,7 @@
 ## :scroll: Примеры API тестов
 - Пока в разработке
 
-## <img src="images/Jenkins.svg" width="25" height="25"  alt="Jenkins" title="Jenkins"/></a> Сборка в Jenkins с параметрами
+## <img src="icons/Jenkins.svg" width="25" height="25"  alt="Jenkins" title="Jenkins"/></a> Сборка в Jenkins с параметрами
 >
 > В сборке присутствуют настраиваемые параметры.
 >
@@ -52,7 +52,7 @@
 <img title="Сборка в Jenkins с параметрами" src="images/Jenkins.png">
 </p>
 
-## <img src="images/Allure_Report.svg" width="25" height="25"  alt="Allure_Report" title="Allure_Report" title="Allure_Report"/></a> Allure отчет
+## <img src="icons/Allure_Report.svg" width="25" height="25"  alt="Allure_Report" title="Allure_Report" title="Allure_Report"/></a> Allure отчет
 >
 > Allure формирует подробный отчет о прогоне тестов. Кастомные фильтры и листенеры делают отчет максимально понятным
 >
@@ -68,7 +68,7 @@
 <img title="Allure отчет" src="images/Allure2.png">
 </p>
 
-## <img width="4%" title="Telegram" src="images/Telegram.svg"> Отчет в Telegram с помощью бота
+## <img width="4%" title="Telegram" src="icons/Telegram.svg"> Отчет в Telegram с помощью бота
 >
 > После прогона всех тестов в <code>Telegram</code> чат автоматически приходит сообщение с полной информацией о прогоне и ссылкой на <code>Allure</code>
 >
