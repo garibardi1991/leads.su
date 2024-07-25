@@ -12,15 +12,15 @@
 
 ## :earth_africa: Технологии и инструменты
 <p>
-<a href="https://www.jetbrains.com/pycharm/"><img src="images/PyCharm_Icon.svg" width="50" height="50"  alt="Pycharm" title="IntelliJ IDEA"/></a>
-<a href="https://www.python.org/"><img src="images/python.svg" width="50" height="50"  alt="Python" title="Python"/></a>
-<a href="https://github.com/"><img src="images/Github.svg" width="50" height="50"  alt="Github" title="GitHub"/></a>
-<a href="https://www.selenium.dev/"><img src="images/selenium.svg" width="50" height="50"  alt="Selenium" title="Selenium"/></a>
-<a href="https://selenide.org/"><img src="images/Selenide.svg" width="50" height="50"  alt="Selenide" title="Selenide"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="images/Selenoid.svg" width="50" height="50"  alt="Selenoid" title="Selenoid"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
-<a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
-<a href="https://github.com/yashaka/selene"><img src="images/selene.png" width="50" height="50"  alt="Selene" title="Selene"/></a>
+<a href="https://www.jetbrains.com/pycharm/"><img src="icons/PyCharm_Icon.svg" width="50" height="50"  alt="Pycharm" title="IntelliJ IDEA"/></a>
+<a href="https://www.python.org/"><img src="icons/python.svg" width="50" height="50"  alt="Python" title="Python"/></a>
+<a href="https://github.com/"><img src="icons/Github.svg" width="50" height="50"  alt="Github" title="GitHub"/></a>
+<a href="https://www.selenium.dev/"><img src="icons/selenium.svg" width="50" height="50"  alt="Selenium" title="Selenium"/></a>
+<a href="https://selenide.org/"><img src="icons/Selenide.svg" width="50" height="50"  alt="Selenide" title="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="icons/Selenoid.svg" width="50" height="50"  alt="Selenoid" title="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="icons/Allure_Report.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="icons/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
+<a href="https://github.com/yashaka/selene"><img src="icons/selene.png" width="50" height="50"  alt="Selene" title="Selene"/></a>
 </p>
 
 В данном проекте автотесты написаны на <code>Python</code> с использованием <code>Selenium</code>, <code>Selene</code> и <code>Pytest</code> для UI-тестов
