@@ -7,7 +7,6 @@ from selenium.webdriver.chrome.options import Options
 from selene import browser
 from utils import attach
 from dotenv import load_dotenv
-from pages.leads_pages import AuthenticationForm
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -46,13 +45,10 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    browser.config.window_height = 1080
-    browser.config.window_width = 1920
     browser.config.base_url = 'http://webmaster.dev-qa.leads/'
-    # authentication_form = AuthenticationForm()
-    # authentication_form.open()
-    # authentication_form.type_log_pass()
-
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
+    browser.config.driver = driver
     yield browser
 
     attach.add_screenshot(browser)
