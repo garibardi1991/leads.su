@@ -49,7 +49,7 @@
 >
 > Например размер запускаемого браузера или тип браузера. Сами тесты запускаются удаленно с помощью <code>Selenoid</code>
 <p align="center">
-<img title="Сборка в Jenkins с параметрами" src="images/Jenkins.png">
+<img title="Сборка в Jenkins с параметрами" src="icons/Jenkins parametrs.png">
 </p>
 
 ## <img src="icons/Allure_Report.svg" width="25" height="25"  alt="Allure_Report" title="Allure_Report" title="Allure_Report"/></a> Allure отчет
