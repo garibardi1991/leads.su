@@ -7,8 +7,8 @@ class AuthenticationForm:
         browser.open('login')
 
     def type_log_pass(self):
-        browser.element('#webmaster_models_web_LoginForm_email').type('test@leads.su')
-        browser.element('#webmaster_models_web_LoginForm_password').type('123456')
+        browser.element('#webmaster_models_web_LoginForm_email').type('trubikhov.i@leads.su')
+        browser.element('#webmaster_models_web_LoginForm_password').type('Igor25041991!')
         button = browser.element('[type=submit]')
         button.click()
 
