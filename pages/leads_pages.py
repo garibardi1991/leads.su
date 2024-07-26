@@ -14,4 +14,4 @@ class AuthenticationForm:
 
     def check_id(self):
         time.sleep(5)
-        browser.element('.user-info__id').should(have.text('ID 13714'))
+        browser.element('.user-info__id').should(have.text('ID 197686'))
