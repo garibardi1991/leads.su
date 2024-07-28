@@ -17,7 +17,7 @@ def test_login_auto(setup_browser):
         authentication_form.open()
 
     with allure.step("Вводим логин и пароль"):
-        authentication_form.type_log_pass()
+        authentication_form.entering_login_password()
 
     with allure.step("Проверяем, что вошли под тем пользователем"):
         authentication_form.check_id()
