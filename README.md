@@ -61,10 +61,10 @@
 <img title="Allure отчет" src="images/Allure1.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="images/Allure.png">
+<img title="Allure отчет" src="images/Allure2.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="images/Allure2.png">
+<img title="Allure отчет" src="images/Allure3.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="icons/Telegram.svg"> Отчет в Telegram с помощью бота
