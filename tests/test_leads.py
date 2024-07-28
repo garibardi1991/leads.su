@@ -30,7 +30,7 @@ def test_login_auto(setup_browser):
 @allure.story("Тестирование отображения витрины в конструкторе")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_login_auto(setup_browser):
-    with allure.step("Открытие констурктора витрин"):
+    with allure.step("Открытие конструктора витрин"):
         showcase_designer = ShowcaseDesigner()
         showcase_designer.open()
 
