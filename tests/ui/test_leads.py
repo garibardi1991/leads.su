@@ -3,6 +3,7 @@ from models.pages.ui.leads_auto_page import AuthenticationForm
 from allure_commons.types import Severity
 from models.pages.ui.designer_page import ShowcaseDesigner
 from models.pages.ui.shortener_page import LinkShortener
+from models.pages.ui.loading_avatar_page import LoadingAvatar
 
 
 @allure.tag("web")
@@ -57,3 +58,21 @@ def test_link_shortener():
 
     with allure.step("Проверка что сократили данную ссылку"):
         link_shortener.checking_link('https://pxl.leads.su/')
+
+
+@allure.tag("web")
+@allure.severity(Severity.NORMAL)
+@allure.label("owner", "Trubikhov")
+@allure.feature("Загрузка аватара пользователя")
+@allure.story("Тестирование загрузки аватара пользователя")
+@allure.link("http://webmaster.dev-qa.leads/", name="Testing")
+def test_link_shortener():
+    with allure.step("Открыть профиль пользователя"):
+        load_avatar = LoadingAvatar()
+        load_avatar.open()
+
+    with allure.step("Загрузка изображения"):
+        load_avatar.file_upload('photo_2022-08-18_21-18-12.jpg')
+
+    with allure.step("Сохрание профиля"):
+        load_avatar.click_save_button()
