@@ -26,8 +26,15 @@ class ShowcaseDesigner:
 
 
 class LinkShortener:
-    browser.open('app/linkShortener')
-    browser.element('#input-url').type('https://pxl.leads.su/')
-    button = browser.element('.lds-btn.link-shortener-create-form__form-send-btn')
-    button.click()
-    browser.element('.lds-control__message').should(have.text('Невозможно сократить эту ссылку'))
+    def open(self):
+        browser.open('app/linkShortener')
+
+    def input_link(self, text):
+        browser.element('#input-url').type(text)
+
+    def button_click(self):
+        button = browser.element('.lds-btn.link-shortener-create-form__form-send-btn')
+        button.click()
+
+    def checking_link(self, text):
+        browser.element('.link-shortener-list-row').should(have.text(text))

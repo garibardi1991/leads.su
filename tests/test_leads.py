@@ -2,6 +2,8 @@ import allure
 from pages.leads_pages import AuthenticationForm
 from allure_commons.types import Severity
 from pages.leads_pages import ShowcaseDesigner
+from pages.leads_pages import LinkShortener
+
 
 @allure.tag("web")
 @allure.severity(Severity.NORMAL)
@@ -10,7 +12,6 @@ from pages.leads_pages import ShowcaseDesigner
 @allure.story("Тестирование формы авторизации на ЛКВ")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_login_auto(setup_browser):
-
     with allure.step("Открытие регистрационной формы"):
         authentication_form = AuthenticationForm()
         authentication_form.open()
@@ -21,6 +22,7 @@ def test_login_auto(setup_browser):
     with allure.step("Проверяем, что вошли под тем пользователем"):
         authentication_form.check_id()
 
+
 @allure.tag("web")
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "Trubikhov")
@@ -29,15 +31,29 @@ def test_login_auto(setup_browser):
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_login_auto(setup_browser):
     with allure.step("Открытие констурктора витрин"):
-        showcase_designer= ShowcaseDesigner()
+        showcase_designer = ShowcaseDesigner()
         showcase_designer.open()
 
     with allure.step("Проверка находжения витрины по ID в списке"):
         showcase_designer.check_showcase_id('2174')
 
 
+@allure.tag("web")
+@allure.severity(Severity.NORMAL)
+@allure.label("owner", "Trubikhov")
+@allure.feature("Сокращатор ссылок")
+@allure.story("Тестирование сокращатора ссылок")
+@allure.link("http://webmaster.dev-qa.leads/", name="Testing")
+def test_login_auto(setup_browser):
+    with allure.step("Открытие сокращатора ссылок"):
+        link_shortener = LinkShortener()
+        link_shortener.open()
 
+    with allure.step("Ввод сокращаемой ссылки"):
+        link_shortener.input_link('https://pxl.leads.su/')
 
+    with allure.step("Нажатие кнопки сократить"):
+        link_shortener.button_click()
 
-
-
+    with allure.step("Проверка что сократили данную ссылку"):
+        link_shortener.checking_link('https://pxl.leads.su/')
