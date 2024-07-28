@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selene import browser
 from utils import attach
 from dotenv import load_dotenv
-from pages.leads_auto_page import AuthenticationForm
+from models.pages.ui.leads_auto_page import AuthenticationForm
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -28,7 +28,7 @@ def load_env():
 def authentication():
     authentication_form = AuthenticationForm()
     authentication_form.open()
-    authentication_form.type_log_pass()
+    authentication_form.entering_login_password()
 
 
 @pytest.fixture(scope='session', autouse=True)

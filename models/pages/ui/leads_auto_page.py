@@ -13,7 +13,7 @@ class AuthenticationForm:
     def open(self):
         browser.open('login')
 
-    def type_log_pass(self):
+    def entering_login_password(self):
         login = os.getenv('LOG')
         password = os.getenv('PASS')
         browser.element('#webmaster_models_web_LoginForm_email').type(login)
