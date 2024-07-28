@@ -24,3 +24,10 @@ class ShowcaseDesigner:
     def check_showcase_id(self, id):
         browser.element('.showcase-list__id').should(have.text(id))
 
+
+class LinkShortener:
+    browser.open('app/linkShortener')
+    browser.element('#input-url').type('https://pxl.leads.su/')
+    button = browser.element('.lds-btn.link-shortener-create-form__form-send-btn')
+    button.click()
+    browser.element('.lds-control__message').should(have.text('Невозможно сократить эту ссылку'))
