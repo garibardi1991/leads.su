@@ -69,7 +69,7 @@
 <img title="Allure отчет" src="resources/icons/Allure3.png">
 </p>
 
-## <img width="4%" title="Telegram" src="icons/Telegram.svg"> Отчет в Telegram с помощью бота
+## <img width="4%" title="Telegram" src="resources/icons/Telegram.svg"> Отчет в Telegram с помощью бота
 >
 > После прогона всех тестов в <code>Telegram</code> чат автоматически приходит сообщение с полной информацией о прогоне и ссылкой на <code>Allure</code>
 >
