@@ -29,7 +29,7 @@ def test_login_auto(setup_browser):
 @allure.feature("Отображение витрины")
 @allure.story("Тестирование отображения витрины в конструкторе")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_showcase_designer(setup_browser_auto):
+def test_showcase_designer(authentication):
     with allure.step("Открытие конструктора витрин"):
         showcase_designer = ShowcaseDesigner()
         showcase_designer.open()
@@ -44,7 +44,7 @@ def test_showcase_designer(setup_browser_auto):
 @allure.feature("Сокращатор ссылок")
 @allure.story("Тестирование сокращатора ссылок")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_link_shortener(setup_browser_auto):
+def test_link_shortener(authentication):
     with allure.step("Открытие сокращатора ссылок"):
         link_shortener = LinkShortener()
         link_shortener.open()
