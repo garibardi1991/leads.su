@@ -53,7 +53,7 @@
 <img title="Сборка в Jenkins с параметрами" src="resources/icons/Jenkins parametrs.png">
 </p>
 
-## <img src="icons/Allure_Report.svg" width="25" height="25"  alt="Allure_Report" title="Allure_Report" title="Allure_Report"/></a> Allure отчет
+## <img src="resources/icons/Allure_Report.svg" width="25" height="25"  alt="Allure_Report" title="Allure_Report" title="Allure_Report"/></a> Allure отчет
 >
 > Allure формирует подробный отчет о прогоне тестов. Кастомные фильтры и листенеры делают отчет максимально понятным
 >
