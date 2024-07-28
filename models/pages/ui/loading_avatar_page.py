@@ -1,15 +1,22 @@
 from pathlib import Path
 
-from selene import browser, have
+import allure
+from selene import browser
 
 
 class LoadingAvatar:
     def open(self):
-        browser.open('account/user/update')
+        with allure.step("Открыть профиль пользователя"):
+            browser.open('account/user/update')
 
     def file_upload(self, file):
-        browser.element('[type="file"]').send_keys(str(Path(__file__).parent.parent.joinpath(
-            f'resources/{file}')))
+        with allure.step("Загрузка изображения"):
+            browser.element('[type="file"]').send_keys(str(Path(__file__).parent.parent.joinpath(
+                f'resources/{file}')))
 
     def click_save_button(self):
-        browser.element('#save-btn').click()
+        with allure.step("Сохрание профиля"):
+            browser.element('#save-btn').click()
+
+
+load_avatar = LoadingAvatar()
