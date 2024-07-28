@@ -58,13 +58,13 @@
 > Например в отчет пишутся все селекторы и методы <code>Selene</code>, отчеты формируются по категориям, в конце приложен скриншот, видео запись прогона теста и логи.
 Для API тестов полностью указаны данные запроса/ответа
 <p align="center">
-<img title="Allure отчет" src="images/Allure1.png">
+<img title="Allure отчет" src="icons/Allure1.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="images/Allure2.png">
+<img title="Allure отчет" src="icons/Allure2.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="images/Allure3.png">
+<img title="Allure отчет" src="icons/Allure3.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="icons/Telegram.svg"> Отчет в Telegram с помощью бота
@@ -80,5 +80,5 @@
 > <code>Selenoid</code> пишет видео прогона каждого теста и видео прикладывается в отчет <code>Allure</code>
 >
 <p>
-<img title="Selenoid Video" src="images/Selenoid.gif" alt="video">
+<img title="Selenoid Video" src="icons/Allure4.gif" alt="video">
 </p>
