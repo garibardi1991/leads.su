@@ -60,13 +60,13 @@
 > Например в отчет пишутся все селекторы и методы <code>Selene</code>, отчеты формируются по категориям, в конце приложен скриншот, видео запись прогона теста и логи.
 Для API тестов полностью указаны данные запроса/ответа
 <p align="center">
-<img title="Allure отчет" src="resources/icons/Allure1.png">
+<img title="Allure отчет" src="resources/icons/Allure 1.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="resources/icons/Allure2.png">
+<img title="Allure отчет" src="resources/icons/Allure 2.png">
 </p>
 <p align="center">
-<img title="Allure отчет" src="resources/icons/Allure3.png">
+<img title="Allure отчет" src="resources/icons/Allure 3.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="resources/icons/Telegram.svg"> Отчет в Telegram с помощью бота
