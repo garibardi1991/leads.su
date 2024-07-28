@@ -9,7 +9,6 @@ def load_env():
 
 
 class AuthenticationForm:
-
     def open(self):
         browser.open('login')
 
