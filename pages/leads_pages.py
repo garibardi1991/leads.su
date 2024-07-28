@@ -15,3 +15,12 @@ class AuthenticationForm:
     def check_id(self):
         time.sleep(5)
         browser.element('.user-info__id').should(have.text('ID 197686'))
+
+
+class ShowcaseDesigner:
+    def open(self):
+        browser.open('app/showcase')
+
+    def check_showcase_id(self, id):
+        browser.element('.showcase-list__id').should(have.text(id))
+
