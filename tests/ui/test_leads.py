@@ -4,6 +4,7 @@ from allure_commons.types import Severity
 from models.pages.ui.designer_page import ShowcaseDesigner
 from models.pages.ui.shortener_page import LinkShortener
 from models.pages.ui.loading_avatar_page import LoadingAvatar
+from models.pages.ui.scroll_page import PageScroll
 
 
 @allure.tag("web")
@@ -66,7 +67,7 @@ def test_link_shortener():
 @allure.feature("Загрузка аватара пользователя")
 @allure.story("Тестирование загрузки аватара пользователя")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_link_shortener():
+def test_load_avatar():
     with allure.step("Открыть профиль пользователя"):
         load_avatar = LoadingAvatar()
         load_avatar.open()
@@ -76,3 +77,21 @@ def test_link_shortener():
 
     with allure.step("Сохрание профиля"):
         load_avatar.click_save_button()
+
+
+@allure.tag("web")
+@allure.severity(Severity.NORMAL)
+@allure.label("owner", "Trubikhov")
+@allure.feature("Работа скролла на главной странице")
+@allure.story("Тестирование работы скролла")
+@allure.link("http://webmaster.dev-qa.leads/", name="Testing")
+def test_link_shortener():
+    with allure.step("Открыть главную страницу"):
+        page_scroll = PageScroll()
+        page_scroll.open()
+
+    with allure.step("Скролл до 'Офферы специально для вас'"):
+        page_scroll.check_scroll_offers('Офферы специально для вас')
+
+    with allure.step("Скролл до ID пользователя"):
+        page_scroll.check_scroll_id('ID 197686')
