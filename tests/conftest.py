@@ -24,11 +24,11 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='session')
-def authentication():
-    authentication_form = AuthenticationForm()
-    authentication_form.open()
-    authentication_form.entering_login_password()
+# @pytest.fixture(scope='session')
+# def authentication():
+#     authentication_form = AuthenticationForm()
+#     authentication_form.open()
+#     authentication_form.entering_login_password()
 
 
 @pytest.fixture(scope='session', autouse=True)
