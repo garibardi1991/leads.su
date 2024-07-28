@@ -9,7 +9,7 @@ class PageScroll:
 
     def check_scroll_offers(self, text):
         with allure.step("Скролл до 'Офферы специально для вас'"):
-            browser.element('.recommended-offers box').perform(command.js.scroll_into_view).should(
+            browser.element('.recommended-offers').perform(command.js.scroll_into_view).should(
                 have.text(text))
 
     def check_scroll_id(self, id):

@@ -12,7 +12,7 @@ class LoadingAvatar:
     def file_upload(self, file):
         with allure.step("Загрузка изображения"):
             browser.element('[type="file"]').send_keys(str(Path(__file__).parent.parent.joinpath(
-                f'resources/{file}')))
+                f'leads.su/resources/{file}')))
 
     def click_save_button(self):
         with allure.step("Сохрание профиля"):
