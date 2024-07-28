@@ -34,7 +34,7 @@ def test_showcase_designer(setup_browser_auto):
         showcase_designer = ShowcaseDesigner()
         showcase_designer.open()
 
-    with allure.step("Проверка находжения витрины по ID в списке"):
+    with allure.step("Проверка нахождения витрины по ID в списке"):
         showcase_designer.check_showcase_id('2174')
 
 
