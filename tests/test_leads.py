@@ -1,8 +1,8 @@
 import allure
-from pages.leads_pages import AuthenticationForm
+from pages.leads_auto_page import AuthenticationForm
 from allure_commons.types import Severity
-from pages.leads_pages import ShowcaseDesigner
-from pages.leads_pages import LinkShortener
+from pages.designer_page import ShowcaseDesigner
+from pages.shortener_page import LinkShortener
 
 
 @allure.tag("web")

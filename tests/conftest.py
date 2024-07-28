@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selene import browser
 from utils import attach
 from dotenv import load_dotenv
-from pages.leads_pages import AuthenticationForm
+from pages.leads_auto_page import AuthenticationForm
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
