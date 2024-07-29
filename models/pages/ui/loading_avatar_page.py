@@ -1,7 +1,9 @@
-from pathlib import Path
+from importlib import resources
 
 import allure
 from selene import browser
+
+from utils import resource
 
 
 class LoadingAvatar:
@@ -11,8 +13,7 @@ class LoadingAvatar:
 
     def file_upload(self, file):
         with allure.step("Загрузка изображения"):
-            browser.element('[type="file"]').send_keys(str(Path(__file__).parent.parent.parent.parent.joinpath(
-                f'resources/{file}')))
+            browser.element('[type="file"]').set_value(resource.path(file))
 
     def click_save_button(self):
         with allure.step("Сохрание профиля"):
