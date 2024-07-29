@@ -61,7 +61,7 @@ def test_load_avatar():
 @allure.feature("Работа скролла на главной странице")
 @allure.story("Тестирование работы скролла")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_page_scroll():
+def test_scrolling_home_page():
     page_scroll.open()
     page_scroll.check_scroll_offers('Офферы специально для вас')
     page_scroll.check_scroll_id('ID 197686')
