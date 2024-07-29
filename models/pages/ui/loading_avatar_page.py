@@ -18,7 +18,6 @@ class LoadingAvatar:
     def checking_file(self):
         with allure.step("Проверяем загруженное изаброжение"):
 
-
     def click_save_button(self):
         with allure.step("Сохрание профиля"):
             browser.element('#save-btn').click()
