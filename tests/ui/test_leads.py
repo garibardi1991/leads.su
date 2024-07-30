@@ -52,7 +52,7 @@ def test_link_shortener():
 def test_load_avatar():
     load_avatar.open()
     load_avatar.file_upload('photo_2022-08-18_21-18-12.jpg')
-    # load_avatar.checking_file()
+    load_avatar.checking_file()
     load_avatar.click_save_button()
 
 
