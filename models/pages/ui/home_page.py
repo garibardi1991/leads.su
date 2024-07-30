@@ -18,4 +18,4 @@ class HomePageScroll:
                 have.text(id))
 
 
-home_page_scroll = HomePageScroll()
+home_page = HomePageScroll()
