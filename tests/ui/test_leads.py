@@ -27,7 +27,7 @@ def test_login_auto(setup_browser):
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_showcase_designer():
     showcase_designer.open()
-    showcase_designer.check_showcase_id('2174')
+    showcase_designer.check_showcase_id('3324')
 
 
 @allure.tag("web")
