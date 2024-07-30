@@ -2,7 +2,7 @@ import allure
 from selene import browser, have, command
 
 
-class PageScroll:
+class HomePageScroll:
     def open(self):
         with allure.step("Открыть главную страницу"):
             browser.open('app')
@@ -18,4 +18,4 @@ class PageScroll:
                 have.text(id))
 
 
-page_scroll = PageScroll()
+home_page_scroll = HomePageScroll()

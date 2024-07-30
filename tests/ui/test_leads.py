@@ -4,7 +4,7 @@ from allure_commons.types import Severity
 from models.pages.ui.designer_page import showcase_designer
 from models.pages.ui.shortener_page import link_shortener
 from models.pages.ui.loading_avatar_page import load_avatar
-from models.pages.ui.scroll_page import page_scroll
+from models.pages.ui.home_scroll_page import home_page_scroll
 
 
 @allure.tag("web")
@@ -63,6 +63,6 @@ def test_load_avatar():
 @allure.story("Тестирование работы скролла")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_scrolling_home_page():
-    page_scroll.open()
-    page_scroll.check_scroll_offers('Офферы специально для вас')
-    page_scroll.check_scroll_id('ID 197686')
+    home_page_scroll.open()
+    home_page_scroll.check_scroll_offers('Офферы специально для вас')
+    home_page_scroll.check_scroll_id('ID 197686')
