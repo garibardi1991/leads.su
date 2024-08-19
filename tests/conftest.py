@@ -1,6 +1,9 @@
 import os
 
+import allure
 import pytest
+import requests
+from allure_commons.types import AttachmentType
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -9,6 +12,24 @@ from utils import attach
 from dotenv import load_dotenv
 
 DEFAULT_BROWSER_VERSION = "100.0"
+
+URL = 'https://webmaster.leads.su/'
+
+login = os.getenv('LOGIN')
+password = os.getenv('PASSWORD')
+
+
+def auth_with_api():
+    response_auth = requests.post(
+        url=URL + '/login',
+        data={'Email': {login}, 'Password': {password}},
+        allow_redirects=False
+    )
+    cookie = response_auth.cookies.get("NOPCOMMERCE.AUTH")
+    allure.attach(body=response_auth.text, name='Response', attachment_type=AttachmentType.TEXT, extension='.txt')
+    allure.attach(body=cookie, name='Cookie', attachment_type=AttachmentType.TEXT, extension='.txt')
+
+    return cookie
 
 
 def pytest_addoption(parser):
@@ -36,9 +57,6 @@ def setup_browser(request):
             "enableVideo": True
         }
     }
-
-    login = os.getenv('LOGIN')
-    password = os.getenv('PASSWORD')
 
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
