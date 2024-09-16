@@ -2,4 +2,7 @@ selene>=2.0.0rc9
 pytest~=8.2.2
 allure-pytest==2.13.5
 python-dotenv==1.0.1
-requests
+requests~=2.32.3
+allure-python-commons~=2.13.5
+jsonschema~=4.23.0
+selenium~=4.23.1

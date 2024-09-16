@@ -42,7 +42,11 @@
 
 
 ## :scroll: Примеры API тестов
-- Пока в разработке
+API тесты были написаны на сайт demoqa.com:
+- Проверка авторизации, через post запрос
+- Проверка неверной авторизаци, через post запрос
+- Проверка отражения книг пользователя, через get запрос
+- Проверка некорректного запроса на удаления аккаунта, через post запрос
 
 ## <img src="resources/icons/Jenkins.svg" width="25" height="25"  alt="Jenkins" title="Jenkins"/></a> Сборка в Jenkins с параметрами
 >
@@ -68,6 +72,20 @@
 <p align="center">
 <img title="Allure отчет" src="resources/icons/Allure 3.png">
 </p>
+
+
+## :scroll: Api отчет прогона тестов:
+
+<p align="center">
+<img title="Allure отчет" src="resources/icons/Allure api 1.png">
+</p>
+<p align="center">
+<img title="Allure отчет" src="resources/icons/Allure api 2.png">
+</p>
+<p align="center">
+<img title="Allure отчет" src="resources/icons/Allure api 3.png">
+</p>
+
 
 ## <img width="4%" title="Telegram" src="resources/icons/Telegram.svg"> Отчет в Telegram с помощью бота
 >

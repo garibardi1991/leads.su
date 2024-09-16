@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "mainLink": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "hash",
+        "created",
+        "links",
+        "mainLink"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}
