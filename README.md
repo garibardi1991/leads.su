@@ -73,8 +73,7 @@ API тесты были написаны на сайт demoqa.com:
 <img title="Allure отчет" src="resources/icons/Allure 3.png">
 </p>
 
-
-## :scroll: Api отчет прогона тестов:
+## Api отчет прогона тестов:
 
 <p align="center">
 <img title="Allure отчет" src="resources/icons/Allure api 1.png">
