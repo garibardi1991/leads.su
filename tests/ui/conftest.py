@@ -45,7 +45,7 @@ def setup_browser(request):
 
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/#/",
         options=options
     )
     browser.config.base_url = 'https://webmaster.leads.su/'
