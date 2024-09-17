@@ -12,10 +12,6 @@ DEFAULT_BROWSER_VERSION = "100.0"
 
 URL = 'https://webmaster.leads.su/'
 
-login = os.getenv('LOGIN')
-password = os.getenv('PASSWORD')
-
-
 def pytest_addoption(parser):
     parser.addoption(
         '--browser_version',
@@ -41,8 +37,11 @@ def setup_browser(request):
             "enableVideo": True
         }
     }
-
     options.capabilities.update(selenoid_capabilities)
+
+    login = os.getenv('LOGIN')
+    password = os.getenv('PASSWORD')
+
     driver = webdriver.Remote(
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
