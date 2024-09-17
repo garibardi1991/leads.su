@@ -19,7 +19,7 @@ password = os.getenv('PASSWORD')
 def pytest_addoption(parser):
     parser.addoption(
         '--browser_version',
-        default='100.0'
+        default='122.0'
     )
 
 
@@ -44,7 +44,7 @@ def setup_browser(request):
 
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/#/",
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
     browser.config.base_url = 'https://webmaster.leads.su/'
