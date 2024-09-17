@@ -16,7 +16,6 @@ login = os.getenv('LOGIN')
 password = os.getenv('PASSWORD')
 
 
-
 def pytest_addoption(parser):
     parser.addoption(
         '--browser_version',
