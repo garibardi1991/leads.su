@@ -1,5 +1,11 @@
 import allure
 from selene import browser, have, query
+import os
+from dotenv import load_dotenv
+
+
+def load_env():
+    load_dotenv()
 
 
 class AuthenticationForm:
@@ -10,8 +16,10 @@ class AuthenticationForm:
 
     def entering_login_password(self):
         with allure.step("Вводим логин и пароль"):
-            browser.element('#webmaster_models_web_LoginForm_email').type('trubikhov.i@leads.su')
-            browser.element('#webmaster_models_web_LoginForm_password').type('Igor25041991!')
+            login = os.getenv('LOG')
+            password = os.getenv('PASS')
+            browser.element('#webmaster_models_web_LoginForm_email').type(login)
+            browser.element('#webmaster_models_web_LoginForm_password').type(password)
             browser.element('[type=submit]').click()
 
     def check_id(self):
