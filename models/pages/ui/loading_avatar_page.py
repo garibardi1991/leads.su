@@ -21,6 +21,9 @@ class LoadingAvatar:
             with open(name, "wb") as file:
                 response = requests.get(f'https://logo.s3.leads.su//197686/127170/:{name}')
                 file.write(response.content)
+        file_path = 'C:\\Users\\user\\PycharmProjects\\leads.su\\tests\\ui\\photo_2022-08-18_21-18-12.jpg'
+        if os.path.exists(file_path):
+            os.remove(file_path)
 
     def click_save_button(self):
         with allure.step("Сохрание профиля"):
