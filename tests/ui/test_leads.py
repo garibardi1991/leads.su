@@ -25,7 +25,7 @@ def test_login_auto(setup_browser):
 @allure.feature("Отображение витрины")
 @allure.story("Тестирование отображения витрины в конструкторе")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_showcase_designer():
+def test_showcase_designer(authorization):
     showcase_designer.open()
     showcase_designer.check_showcase_id('3324')
 
@@ -36,7 +36,7 @@ def test_showcase_designer():
 @allure.feature("Сокращатор ссылок")
 @allure.story("Тестирование сокращатора ссылок")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_link_shortener():
+def test_link_shortener(authorization):
     link_shortener.open()
     link_shortener.input_link('https://pxl.leads.su/')
     link_shortener.button_click()
@@ -49,7 +49,7 @@ def test_link_shortener():
 @allure.feature("Загрузка аватара пользователя")
 @allure.story("Тестирование загрузки аватара пользователя")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_load_avatar():
+def test_load_avatar(authorization):
     load_avatar.open()
     load_avatar.file_upload('photo_2022-08-18_21-18-12.jpg')
     load_avatar.checking_file('photo_2022-08-18_21-18-12.jpg')
@@ -62,7 +62,7 @@ def test_load_avatar():
 @allure.feature("Работа скролла на главной странице")
 @allure.story("Тестирование работы скролла")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_scrolling_home_page():
+def test_scrolling_home_page(authorization):
     home_page.open()
     home_page.check_scroll_offers('Офферы специально для вас')
     home_page.check_scroll_id('ID 197686')

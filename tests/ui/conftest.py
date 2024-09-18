@@ -5,6 +5,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selene import browser
+
+from models.pages.ui.leads_auto_page import authentication_form
 from utils import attach
 from dotenv import load_dotenv
 
@@ -58,3 +60,9 @@ def setup_browser(request):
     attach.add_video(browser)
 
     browser.quit()
+
+@pytest.fixture(scope='session')
+def authorization (request):
+    authentication_form.open()
+    authentication_form.entering_login_password()
+    authentication_form.check_id()
