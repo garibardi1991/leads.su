@@ -13,4 +13,5 @@ def test_load_avatar(authorization):
     load_avatar.open()
     load_avatar.file_upload('photo_2022-08-18_21-18-12.jpg')
     load_avatar.checking_file('photo_2022-08-18_21-18-12.jpg')
+    load_avatar.cleanup()
     load_avatar.click_save_button()
