@@ -31,7 +31,7 @@ class LoadingAvatar:
                 os.remove(file_path)
 
     def click_save_button(self):
-        with allure.step("Сохрание профиля"):
+        with allure.step("Сохранение профиля"):
             browser.element('#save-btn').click()
 
 
