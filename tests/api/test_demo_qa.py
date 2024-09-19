@@ -41,17 +41,16 @@ def test_no_authorization_user(base_url):
                            )
     with allure.step('Проверяем что статус кода == 200'):
         assert response.status_code == 200
-    with allure.step('Проверяем, что вернулся пустой текст, подтверждающий некорректную авторизацию'):
-        # Логируем текст ответа для отладки
-        print("Response status code:", response.status_code)
-        print("Response text:", response.text)
+    print("Response status code:", response.status_code)
+    print("Response text:", response.text)
+    print("Content-Type:", response.headers.get('Content-Type'))
 
+    with allure.step('Проверяем, что вернулся пустой текст, подтверждающий некорректную авторизацию'):
         try:
             json_response = response.json()
-            # Проверяем, что ответ является None или пустым
             assert json_response is None or json_response == {}
         except requests.exceptions.JSONDecodeError:
-            assert response.text == "", "Ожидался пустой ответ, но получен: " + response.text
+            assert response.text == "", f"Ожидался пустой ответ, но получен: {response.text}"
 
 
 @allure.tag("API")
