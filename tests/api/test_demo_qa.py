@@ -42,8 +42,7 @@ def test_no_authorization_user(base_url):
     with allure.step('Проверяем что статус кода == 200'):
         assert response.status_code == 200
     with allure.step('Проверяем, что вернулся пустой текст, подтверждающий некорректную авторизацию'):
-        assert response.text == 'requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)'
-
+        assert response.text == ''
 
 
 @allure.tag("API")
