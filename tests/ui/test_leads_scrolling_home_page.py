@@ -9,7 +9,7 @@ from models.pages.ui.home_page import home_page
 @allure.feature("Работа скролла на главной странице")
 @allure.story("Тестирование работы скролла")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_scrolling_home_page(authorization):
+def test_scrolling_home_page():
     home_page.open()
     home_page.check_scroll_offers('Офферы специально для вас')
     home_page.check_scroll_id('ID 197686')

@@ -9,7 +9,7 @@ from models.pages.ui.shortener_page import link_shortener
 @allure.feature("Сокращатор ссылок")
 @allure.story("Тестирование сокращатора ссылок")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
-def test_link_shortener(authorization):
+def test_link_shortener():
     link_shortener.open()
     link_shortener.input_link('https://pxl.leads.su/')
     link_shortener.button_click()
