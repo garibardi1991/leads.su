@@ -36,21 +36,18 @@ def test_auto_user(base_url):
 @allure.story("Тестирование запроса на некорректную авторизацию")
 @allure.link("http://webmaster.dev-qa.leads/", name="Testing")
 def test_no_authorization_user(base_url):
-    response = api_request(method="POST", base_api_url=base_url, endpoint='/Account/v1/Login',
+    response = api_request(method="POST", base_api_url=base_url, endpoint='/Account/v1/GenerateToken',
                            data={"userName": "garibardi123", "password": "Oly05041987!"}
                            )
+    body = response.json()
+    schema = schema_path('post_method_token.json')
     with allure.step('Проверяем что статус кода == 200'):
         assert response.status_code == 200
-    print("Response status code:", response.status_code)
-    print("Response text:", response.text)
-    print("Content-Type:", response.headers.get('Content-Type'))
 
-    with allure.step('Проверяем, что вернулся пустой текст, подтверждающий некорректную авторизацию'):
-        try:
-            json_response = response.json()
-            assert json_response is None or json_response == {}
-        except requests.exceptions.JSONDecodeError:
-            assert response.text == "", f"Ожидался пустой ответ, но получен: {response.text}"
+    with allure.step('Проверяем, что вернулся некорректный запрос, подтверждающий некорректную авторизацию'):
+        with open(schema) as file:
+            f = file.read()
+            validate(body, schema=json.loads(f))
 
 
 @allure.tag("API")
